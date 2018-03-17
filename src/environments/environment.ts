@@ -6,10 +6,6 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCd0_9zJJ-9KwGtLCsWMvAH--gaSbulAIg",
-    authDomain: "tobedeletesoon.firebaseapp.com",
-    databaseURL: "https://tobedeletesoon.firebaseio.com",
-    projectId: "tobedeletesoon",
-    storageBucket: "tobedeletesoon.appspot.com",
+  
   }
 };
