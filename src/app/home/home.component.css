@@ -1,1 +1,15 @@
+.currency-blocks {
+    background-color:green;
+    height:15%;;
+}
 
+.align-left {
+    text-align: left;
+    display: inline;
+}
+
+.align-right {
+    text-align: right;
+    display: inline;
+    
+}

@@ -7,7 +7,11 @@ import { BtcComponent } from './btc/btc.component';
 import { KoinexComponent } from './koinex/koinex.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { NgStyle } from '@angular/common';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,16 @@ import { AboutComponent } from './about/about.component';
     BtcComponent,
     KoinexComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+  ],
+  exports:[
+    NgStyle,    
   ],
   providers: [],
   bootstrap: [AppComponent]
