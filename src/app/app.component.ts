@@ -7,12 +7,12 @@ import { AngularFireDatabase} from 'angularfire2/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  crypto: any[];
-  constructor(db: AngularFireDatabase) {
-    db.list('/crypto/BTC/Koinex/current').valueChanges()
-    .subscribe(crypto => {
-      this.crypto = crypto;
-      console.log(this.crypto);      
-    })
-  }
+  // crypto: any[];
+  // constructor(db: AngularFireDatabase) {
+  //   db.list('/crypto/BTC/Koinex/current').valueChanges()
+  //   .subscribe(crypto => {
+  //     this.crypto = crypto;
+  //     console.log(this.crypto);      
+  //   })
+  // }
 }

@@ -12,6 +12,7 @@ import { NgStyle } from '@angular/common';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { LtcComponent } from './ltc/ltc.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { environment } from '../environments/environment';
     KoinexComponent,
     HomeComponent,
     AboutComponent,
+    LtcComponent,
     
   ],
   imports: [
