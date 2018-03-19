@@ -37,40 +37,46 @@ export class LtcComponent implements OnInit {
     var koinex_bid = 
       {
         x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
-        y: this.get_Koinex_highestBid(),
+        y: this.get_Koinex_lastTradedPrice(),
         type: 'scatter',
         name: 'Koinex',        
       }
       var Coinome_bid = 
       {
         x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
-        y: this.get_Coinome_highestBid(),
+        y: this.get_Coinome_lastTradedPrice(),
         type: 'scatter',
         name: 'Coinome',                
       }
-    
+      var Coinome_bid = 
+      {
+        x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
+        y: this.get_Coinome_lastTradedPrice(),
+        type: 'scatter',
+        name: 'Coinome',                
+      }
+      
       var data = [koinex_bid, Coinome_bid]
     
     Plotly.newPlot('myDiv', data);
   }//end of chart
 
 
-
-    get_Koinex_highestBid() {
+    get_Koinex_lastTradedPrice() {
         let koinex_bid_array:any[] =[];
 
         for(let i=0; i < this.koinex.length;i++) {
-          koinex_bid_array.push(this.koinex[i].highestBid);
+          koinex_bid_array.push(this.koinex[i].lastTradedPrice);
         }
           return koinex_bid_array;
     }//EOF
 
 
 
-    get_Coinome_highestBid() {
+    get_Coinome_lastTradedPrice() {
       let Coinome_bid_array:any[] = [];
         for(let i=0; i < this.Coinome.length;i++) {
-          Coinome_bid_array.push(this.Coinome[i].highestBid);
+          Coinome_bid_array.push(this.Coinome[i].lastTradedPrice);
         }
         return Coinome_bid_array;
     }//EOF

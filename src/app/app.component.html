@@ -14,30 +14,35 @@
 </head>
 <body>
   
+<!-- coin nav -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">BLOCK MIRROR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Coins</a>
+        <a class="nav-link" *ngFor="let nav of navigation" (click)="selectedNav(nav)" style="display:inline-block">
+          {{nav}}
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">News Feeds</a>
-      </li>    
+      </li> 
+      
     </ul>
   </div>  
 </nav>
+<!-- coin nav end -->
   <!-- <app-home></app-home> -->
   <!-- <app-btc></app-btc> -->
   <!-- <app-koinex></app-koinex> -->
   <!-- <app-about></app-about> -->
-  <app-ltc></app-ltc>
+  <!-- <app-ltc></app-ltc> -->
 
   <!-- <ul>
     <li *ngFor="let crypt of crypto" [ngStyle]="crypto[3] < 100 ? {'color': 'white','background-color':'red'} : {'color': 'green'}">
