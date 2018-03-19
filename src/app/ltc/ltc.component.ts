@@ -11,19 +11,19 @@ import { AngularFireDatabase} from 'angularfire2/database';
 export class LtcComponent implements OnInit {
 
   public koinex: any[];
-  public Zebpay: any[];
+  public Coinome: any[];
   
   constructor(db:AngularFireDatabase) {
-    db.list('crypto/LTC/exchanges/INR').valueChanges()
+    db.list('/crypto/LTC/Koinex/history/').valueChanges()
     .subscribe(koinex => {
       this.koinex = koinex;
       console.log(this.koinex);        
        this.ltc_chart();             
     });
-    db.list('/crypto/LTC/Zebpay/history/').valueChanges()
-    .subscribe(Zebpay => {
-      this.Zebpay = Zebpay;
-      console.log(this.Zebpay);        
+    db.list('/crypto/LTC/Coinome/history/').valueChanges()
+    .subscribe(Coinome => {
+      this.Coinome = Coinome;
+      console.log(this.Coinome);        
        this.ltc_chart();             
     });
    }
@@ -41,15 +41,15 @@ export class LtcComponent implements OnInit {
         type: 'scatter',
         name: 'Koinex',        
       }
-      var Zebpay_bid = 
+      var Coinome_bid = 
       {
         x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
-        y: this.get_Zebpay_highestBid(),
+        y: this.get_Coinome_highestBid(),
         type: 'scatter',
-        name: 'Zebpay',                
+        name: 'Coinome',                
       }
     
-      var data = [koinex_bid, Zebpay_bid]
+      var data = [koinex_bid, Coinome_bid]
     
     Plotly.newPlot('myDiv', data);
   }//end of chart
@@ -67,13 +67,12 @@ export class LtcComponent implements OnInit {
 
 
 
-    get_Zebpay_highestBid() {
-      let Zebpay_bid_array:any[] = [];
-      // console.log(this.Zebpay.length);
-        for(let i=0; i< this.Zebpay.length;i++) {
-          Zebpay_bid_array.push(this.Zebpay[i].highestBid);
+    get_Coinome_highestBid() {
+      let Coinome_bid_array:any[] = [];
+        for(let i=0; i < this.Coinome.length;i++) {
+          Coinome_bid_array.push(this.Coinome[i].highestBid);
         }
-        return Zebpay_bid_array;
+        return Coinome_bid_array;
     }//EOF
  
 
