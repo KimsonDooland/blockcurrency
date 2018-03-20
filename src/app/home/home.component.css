@@ -1,6 +1,7 @@
 .currency-blocks {
-    background-color:green;
-    height:15%;;
+   
+    height:15%;
+    border: 2px solid #e6effb;
 }
 
 .align-left {
@@ -11,5 +12,26 @@
 .align-right {
     text-align: right;
     display: inline;
-    
+}
+
+.footer-left {
+    text-align: left;   
+    display: inline-block;
+}
+.footer-right {
+    text-align: right;
+    display: inline-block;
+    padding-left:20%; 
+}
+
+footer {
+    border-top: 1px solid black; 
+}
+.currency-names {
+    color: black;
+    font-weight: bold;
+}
+
+.font-price {
+    font-weight: bold;
 }

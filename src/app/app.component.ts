@@ -12,8 +12,10 @@ export class AppComponent {
   inr_navigation: any[];
   usd_navigation: any[];  
 
+  db:AngularFireDatabase;
   selectedNav(nav) {
     console.log(nav);
+    // this.show_currency();
   }
   constructor(db: AngularFireDatabase) {
     //get the Currency list
@@ -21,17 +23,30 @@ export class AppComponent {
     .subscribe(navigation => {
       this.navigation = navigation;    
     });
-    db.list(`/crypto/${this.nav}/exchanges/INR`).valueChanges()
+
+    // db.list(`/crypto/${this.nav}/exchanges/INR`).valueChanges()
+    // .subscribe(inr_navigation => {
+    //   this.inr_navigation = inr_navigation;  
+    //   console.log(this.inr_navigation);
+    // });
+    // db.list(`/crypto/${this.nav}/exchanges/USD`).valueChanges()
+    // .subscribe(usd_navigation => {
+    //   this.usd_navigation = usd_navigation;    
+    //   console.log(this.usd_navigation);
+    // });
+  }
+
+  show_currency() {
+    this.db.list(`/crypto/${this.nav}/exchanges/INR`).valueChanges()
     .subscribe(inr_navigation => {
       this.inr_navigation = inr_navigation;  
       console.log(this.inr_navigation);
     });
-    db.list(`/crypto/${this.nav}/exchanges/USD`).valueChanges()
+   this.db.list(`/crypto/${this.nav}/exchanges/USD`).valueChanges()
     .subscribe(usd_navigation => {
       this.usd_navigation = usd_navigation;    
       console.log(this.usd_navigation);
     });
   }
-
   
 }
