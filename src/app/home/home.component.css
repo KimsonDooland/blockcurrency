@@ -1,3 +1,4 @@
+
 .currency-blocks {
    
     height:15%;
@@ -34,4 +35,12 @@ footer {
 
 .font-price {
     font-weight: bold;
+}
+
+.exchanges-blocks {
+    height:10%;
+    border: 2px solid #e6effb;
+}
+div {
+    overflow:auto;
 }
