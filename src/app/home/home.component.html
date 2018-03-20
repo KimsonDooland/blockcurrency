@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row" style="padding-left:3%">
         <!-- left div -->
         <div class="col-md-4">
             <div class="row" style="padding-top:30%;padding-bottom:40%">
@@ -88,8 +88,8 @@
                         </div>
             </div>
             <!-- IMAGE DIV -->
-            <div class="row text-center" style="margin-top:10%;margin-bottom:10%">
-            <img class ="shadowfilter pulse" src="{{block_mirror_image}}" alt="btc_image" style="width:74%">    
+            <div class="row text-center" style="margin-top:10%;margin-bottom:10%;margin-left:-40px;">
+            <img class ="shadowfilter pulse" src="{{block_mirror_image}}" alt="btc_image" style="width:100%">    
             </div>
             <div class="row">
                     <div class="col-md-10  currency-blocks">
@@ -177,5 +177,34 @@
                                 </div>
                 </div>
         </div>
-     </div>   
+     </div>    <!-- Crypto currency ends -->
+    
 </div><!-- last div -->
+<div class="row">
+        <div class="col-md-12 ">
+            <div class="col-md-2 exchanges-blocks ">
+                   BTC: &#8377; <span class="font-price "> {{BTC_exchanges}}</span>
+            </div>
+            <div class="col-md-2 exchanges-blocks ">
+                   LTC: &#8377; <span class="font-price "> {{LTC_exchanges}}</span>
+                
+           </div>
+           <div class="col-md-2 exchanges-blocks">
+                   ETH: &#8377; <span class="font-price "> {{ETH_exchanges}}</span>
+                
+           </div>
+           <div class="col-md-2 exchanges-blocks">
+                   BCH: &#8377; <span class="font-price "> {{BCH_exchanges}}</span>
+                
+           </div>
+           
+           <div class="col-md-2 exchanges-blocks">
+                   XRP: &#8377; <span class="font-price "> {{XRP_exchanges}}</span>
+                
+           </div>
+           <div class="col-md-2 exchanges-blocks">
+                   OMG: &#8377; <span class="font-price "> {{OMG_exchanges}}</span>
+                
+           </div>
+        </div>
+    </div>

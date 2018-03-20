@@ -1,3 +1,7 @@
+body {
+	background-color: #ebebe8;
+}
+
 ::-moz-selection { /* Code for Firefox */
     color: white;
     background: #2B5A99;
