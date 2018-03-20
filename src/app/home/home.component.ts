@@ -9,6 +9,8 @@ import { AngularFireDatabase} from 'angularfire2/database';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  //block mirror image
+  block_mirror_image = "assets/block_mirror.png";
 
   // crypto currency 
   public BTC_Coinome: any[];
